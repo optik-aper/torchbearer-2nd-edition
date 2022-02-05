@@ -2,7 +2,7 @@
   "name": "torchbearer2e",
   "title": "Torchbearer 2nd Edition",
   "description": "A simple Torchbearer 2nd Edition system for FoundryVTT",
-  "version": "0.0.1",
+  "version": "v0.0.1-dev",
   "minimumCoreVersion": "0.8.6",
   "compatibleCoreVersion": "9",
   "author": "UxerUospr",
@@ -21,8 +21,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "url": "",
-  "manifest": "system.json",
-  "download": "",
+  "url": "https://raw.githubusercontent.com/optik-aper/torchbearer-2nd-edition",
+  "manifest": "https://raw.githubusercontent.com/optik-aper/torchbearer-2nd-edition/main/system.json",
+  "download": "https://github.com/optik-aper/torchbearer-2nd-edition/releases/tag/v0.0.1-dev",
   "license": "LICENSE.txt"
 }
