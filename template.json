@@ -1,0 +1,380 @@
+{
+  "Actor": {
+    "types": ["character", "npc", "monster"],
+    "templates": {
+	  "attributes": {
+          "name": "",
+	      "stock": "",
+	      "class": "",
+	      "age": "",
+	      "home": "",
+	      "raiment": "",
+	      "parents": "",
+	      "mentor": "",
+	      "friend": "",
+	      "enemy": "",
+		  "belief": "",
+		  "creed": "",
+		  "goal": "",
+		  "instinct": ""
+        },
+		"traits": [
+		  {
+		    "name": "",
+			"level": 0,
+			"beneficial": 0,
+			"checks": 0
+		  },
+		  {
+		    "name": "",
+			"level": 0,
+			"beneficial": 0,
+			"checks": 0
+		  },
+		  {
+		    "name": "",
+			"level": 0,
+			"beneficial": 0,
+			"checks": 0
+		  },
+		  {
+		    "name": "",
+			"level": 0,
+			"beneficial": 0,
+			"checks": 0
+		  },
+		},
+        "abilities": {
+	    	"will": {
+	      	"value": 0,
+	      	"fate": 0,
+	      	"persona": 0
+	      },
+	      "health": {
+	      	"value": 0,
+	      	"fate": 0,
+	      	"persona": 0
+	      },
+	      "resources": {
+	      	"value": 0,
+	      	"fate": 0,
+	      	"persona": 0
+	      },
+	      "circles": {
+	      	"value": 0,
+	      	"fate": 0,
+	      	"persona": 0
+	      },
+	      "precedence": {
+	      	"value": 0
+	      },
+		  "nature": {
+		  	"value": 0,
+			"descriptor": ""
+		  },
+	      "might": {
+	      	"value": 0
+	      }
+        },
+	    "artha": {
+	    	"fate": {
+	      	"value": 0,
+	      	"spent": 0
+	      },
+	      "persona": {
+	      	"value": 0,
+	      	"spent": 0
+	      }
+        },
+	    "conditions": {
+	    	"fresh": true,
+	      "hungry_and_thirsty": false,
+	      "angry": false,
+	      "exhausted": false,
+	      "injured": false,
+	      "sick": false,
+	      "dead": false
+	    },
+		"skills": {
+		  "alchemist": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "arcanist": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "armorer": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "cartographer": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "commander": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "cook": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "criminal": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "dungeoneer": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "fighter": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "haggler": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "healer": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "hunter": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "lore_master": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "manipulator": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "mentor": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "orator": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "pathfinder": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "persuader": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "rider": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "ritualist": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "scavenger": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "scholar": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "scout": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "survivalist": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "theologian": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  },
+		  "": {
+		    "rating": 0,
+			"advancement": {
+			  "fate": 0,
+			  "persona": 0
+			}
+		  }
+		},
+		"wises": [
+		  {
+		    "name": "",
+		    "advancement": {
+		      "pass": false,
+		      "fail": false,
+		      "fate": false,
+		      "persona": false
+		  },
+		  {
+		    "name": "",
+		    "advancement": {
+		      "pass": false,
+		      "fail": false,
+		      "fate": false,
+		      "persona": false
+		  },
+		  {
+		    "name": "",
+		    "advancement": {
+		      "pass": false,
+		      "fail": false,
+		      "fate": false,
+		      "persona": false
+		  },
+		  {
+		    "name": "",
+		    "advancement": {
+		      "pass": false,
+		      "fail": false,
+		      "fate": false,
+		      "persona": false
+		  }
+		]
+	  },
+	  "hitpoints": {
+	    "kill": 0,
+		"capture": 0,
+		"drive_off": 0,
+		"other": ""
+	  }
+    },
+	"character": {
+	  "templates": ["attributes", "artha", "traits", "abilities", "skills", "wises", "conditions"]
+	},
+    "npc": {
+      "templates": ["attributes", "traits", "abilities", "skills"]
+    },
+	"monster": {
+	  "templates": ["attributes"]
+	  "rules": "",
+	  "type": ""
+	}
+  },
+  "Item": {
+    "types": ["weapon", "gear", "consumable", "loot", "item"],
+    "templates": {
+      "base": {
+        "description": "",
+		"inventory": "",
+		"value": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1
+    }
+  }
+}
