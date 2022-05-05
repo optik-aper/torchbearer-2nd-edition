@@ -1,55 +1,98 @@
-<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+<form class="{{cssClass}} {{actor.type}}" autocomplete="off">
 
   {{!-- Sheet Header --}}
-  <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-    <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-      use both the "grid" and "grid-Ncol" class where "N" can be any number
-      from 1 to 12 and will create that number of columns.  --}}
-      <div class="resources grid grid-3col">
+  <header class="character-header">
 
-        {{!-- "flex-group-center" is also defined in the _grid.scss file
-        and it will add a small amount of padding, a border, and will
-        center all of its child elements content and text. --}}
-        <div class="resource flex-group-center">
-          <label for="data.health.value" class="resource-label">Health</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
-          </div>
-        </div>
+	<img class="character-image" src="{{actor.img}}" data-edit="img" title="{{data.attributes.name}}" />
+		
+	<div class="attributes">
 
-        <div class="resource flex-group-center">
-          <label for="data.power.value" class="resource-label">Power</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
-          </div>
-        </div>
+		<div>
+			<h1 class="attribute-character-name">
+				<input id="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+			</h1>
+		</div>
 
-        <div class="resource flex-group-center">
-          <label for="data.attributes.level.value" class="resource-label">Level</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.attributes.level.value" value="{{data.attributes.level.value}}" data-dtype="Number"/>
-          </div>
-        </div>
+		<div>
+			<div>
+			  <label for="data.attributes.stock">Stock</label>
+			  <input type="text" name="data.attributes.stock" value="{{data.attributes.stock}}" />
+			</div>
 
-      </div>
-    </div>
-  </header>
+			<div>
+			  <label for="data.attributes.class">Class</label>
+			  <input type="text" name="data.attributes.class" value="{{data.attributes.class}}" />
+			</div>
+
+			<div>
+			  <label for="data.attributes.age">Age</label>
+			  <input type="number" name="data.attributes.age" value="{{data.attributes.age}}" />
+			</div>
+
+			<div>
+			  <label for="data.attributes.level">Level</label>
+			  <input type="number" name="data.attributes.level" value="{{data.attributes.level}}" />
+			</div>
+		</div>
+
+		<div>
+			<div>
+			  <label for="data.attributes.home">Home</label>
+			  <input type="text" name="data.attributes.home" value="{{data.attributes.home}}" />
+			</div>
+
+			<div>
+			  <label for="data.attributes.raiment">Raiment</label>
+			  <input type="text" name="data.attributes.raiment" id="data-attributes-raiment" value="{{data.attributes.raiment}}" />
+			</div>
+		</div>
+	  </div>
+
+	
+		<div class="conditions">	
+			<div>
+			  <label for="data.conditions.fresh">Fresh</label>
+			  <input type="checkbox" name="data.conditions.fresh" value="{{data.conditions.fresh}}" data-dtype="Boolean" {{checked data.conditions.fresh}}/>
+			</div>
+
+			<div>
+			  <label for="data.conditions.hungry_and_thirsty">Hungry & Thirsty</label>
+			  <input type="checkbox" name="data.conditions.hungry_and_thirsty" value="{{data.conditions.hungry_and_thirsty}}" data-dtype="Boolean" {{checked data.conditions.hungry_and_thirsty}} />
+			</div>
+
+			<div>
+			  <label for="data.conditions.angry">Angry</label>
+			  <input type="checkbox" name="data.conditions.angry" value="{{data.conditions.angry}}" data-dtype="Boolean" {{checked data.conditions.angry}} />
+			</div>
+
+			<div>
+			  <label for="data.conditions.exhausted">Exhausted</label>
+			  <input type="checkbox" name="data.conditions.exhausted" value="{{data.conditions.exhausted}}" data-dtype="Boolean" {{checked data.conditions.exhausted}} />
+			</div>
+
+			<div>
+			  <label for="data.conditions.sick">Sick</label>
+			  <input type="checkbox" name="data.conditions.sick" value="{{data.conditions.sick}}" data-dtype="Boolean" {{checked data.conditions.sick}} />
+			</div>
+
+			<div>
+			  <label for="data.conditions.injured">Injured</label>
+			  <input type="checkbox" name="data.conditions.injured" value="{{data.conditions.injured}}" data-dtype="Boolean" {{checked data.conditions.injured}} />
+			</div>
+
+			<div>
+			  <label for="data.conditions.dead">Dead</label>
+			  <input type="checkbox" name="data.conditions.dead" value="{{data.conditions.dead}}" data-dtype="Boolean" {{checked data.conditions.dead}} />
+			</div>
+		</div>
+	</header>
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="features">Features</a>
-    <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="items">Items</a>
-    <a class="item" data-tab="spells">Spells</a>
-    <a class="item" data-tab="effects">Effects</a>
+    <a class="item" data-tab="about">About</a>
+    <a class="item" data-tab="abilities-skills">Abilities & Skills</a>
+    <a class="item" data-tab="inventory">Inventory</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -83,10 +126,480 @@
       </section>
     </div>
 
-    {{!-- Biography Tab --}}
-    <div class="tab biography" data-group="primary" data-tab="description">
-      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
-      {{editor content=data.biography target="data.biography" rollData=rollData button=true owner=owner editable=editable}}
+    {{!-- Abilities/Skills Tab --}}
+    <div class="tab abilities-skills" data-group="primary" data-tab="abilities-skills">
+
+		<div class="abilities-info">
+			
+			<div>
+				<label for="data.abilities.nature.descriptor">Nature descriptor</label>
+				<input type="text" name="data.abilities.nature.descriptor" value="{{data.abilities.nature.descriptor}}" data-dtype="String" />
+			</div>
+		</div>
+
+		<div class="abilities-skills">
+			<div class="abilities">
+				<h2>Abilities</h2>
+				<div class="main">
+					<div class="grid-span-3">
+						<table>
+							<tr>
+								<th>Raw Ability</th>
+								<th>Rating</th>
+								<th>Advancement</th>
+							</tr>
+
+							</tr>
+								<td>Will</td>
+								<td><input type="text" name="data.abilities.will.rating" value="{{data.abilities.will.rating}}" data-dtype="Number" /></td>
+								<td></td>
+							<tr>
+
+							</tr>
+								<td>Health</td>
+								<td><input type="text" name="data.abilities.health.rating" value="{{data.abilities.health.rating}}" data-dtype="Number" /></td>
+								<td></td>
+							<tr>
+
+							</tr>
+								<td>Nature</td>
+								<td><input type="text" name="data.abilities.nature.rating" value="{{data.abilities.nature.rating}}" data-dtype="Number" /></td>
+								<td></td>
+							<tr>
+						</table>
+					</div>
+
+					<div class="grid-span-3">
+						<table>
+							<tr>
+								<th>Town Ability</th>
+								<th>Rating</th>
+								<th>Advancement</th>
+							</tr>
+
+							</tr>
+								<td>Resources</td>
+								<td><input type="text" name="data.abilities.resources.rating" value="{{data.abilities.resources.rating}}" data-dtype="Number" /></td>
+								<td></td>
+							<tr>
+
+							</tr>
+								<td>Circles</td>
+								<td><input type="text" name="data.abilities.circles.rating" value="{{data.abilities.circles.rating}}" data-dtype="Number" /></td>
+								<td></td>
+							<tr>
+
+							</tr>
+								<td>Precedence</td>
+								<td><input type="text" name="data.abilities.precedence.rating" value="{{data.abilities.precedence.rating}}" data-dtype="Number" /></td>
+								<td></td>
+							<tr>
+
+							</tr>
+								<td>Might</td>
+								<td><input type="text" name="data.abilities.might.rating" value="{{data.abilities.might.rating}}" data-dtype="Number" /></td>
+								<td></td>
+							<tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="skills">
+				<h2>Skills</h2>
+				<div>
+					<div class="grid-span-6">
+						<table>
+							<tr>
+								<th>Skill</th>
+								<th>Rating</th>
+								<th>Advancement</th>
+								<th>Help</th>
+								<th>Base Ability</th>
+							</tr>
+
+							<tr>
+								<td>Alchemist</td>
+								<td><input type="text" name="data.skills.alchemist.rating" value="{{data.skills.alchemist.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Lore Master; Laborer</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Arcanist</td>
+								<td><input type="text" name="data.skills.arcanist.rating" value="{{data.skills.arcanist.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Lore Master</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Armorer</td>
+								<td><input type="text" name="data.skills.armorer.rating" value="{{data.skills.armorer.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Smith; Laborer</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Carpenter</td>
+								<td><input type="text" name="data.skills.carpenter.rating" value="{{data.skills.carpenter.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Alchemist; Laborer</td>
+								<td>Health</td>
+							</tr>
+
+
+							<tr>
+								<td>Cartographer</td>
+								<td><input type="text" name="data.skills.cartographer.rating" value="{{data.skills.cartographer.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Scholar; Pathfinder</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Commander</td>
+								<td><input type="text" name="data.skills.commander.rating" value="{{data.skills.commander.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Steward; Orator</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Cook</td>
+								<td><input type="text" name="data.skills.cook.rating" value="{{data.skills.cook.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Alchemist; Laborer</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Criminal</td>
+								<td><input type="text" name="data.skills.criminal.rating" value="{{data.skills.criminal.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Scout; Scholar</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Dungeoneer</td>
+								<td><input type="text" name="data.skills.dungeoneer.rating" value="{{data.skills.dungeoneer.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Sapper; Survivalist</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Fighter</td>
+								<td><input type="text" name="data.skills.fighter.rating" value="{{data.skills.fighter.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Hunter</td>
+								<td>Heath</td>
+							</tr>
+
+							<tr>
+								<td>Haggler</td>
+								<td><input type="text" name="data.skills.haggler.rating" value="{{data.skills.haggler.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Manipulator</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Healer</td>
+								<td><input type="text" name="data.skills.healer.rating" value="{{data.skills.healer.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Survivalist; Alchemist</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Hunter</td>
+								<td><input type="text" name="data.skills.hunter.rating" value="{{data.skills.hunter.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Survivalist; Laborer</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Laborer</td>
+								<td><input type="text" name="data.skills.laborer.rating" value="{{data.skills.laborer.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Peasant</td>
+								<td>Health</td>
+							</tr>
+
+
+							<tr>
+								<td>Lore Master</td>
+								<td><input type="text" name="data.skills.lore_master.rating" value="{{data.skills.lore_master.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Arcanist; Theologian</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Manipulator</td>
+								<td><input type="text" name="data.skills.manipulator.rating" value="{{data.skills.manipulator.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Haggler; Persuader</td>
+								<td>Will</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="grid-span-6">
+						<table>
+							<tr>
+								<th>Skill</th>
+								<th>Rating</th>
+								<th>Advancement</th>
+								<th>Help</th>
+								<th>Base Ability</th>
+							</tr>
+
+							<tr>
+								<td>Mentor</td>
+								<td><input type="text" name="data.skills.mentor.rating" value="{{data.skills.mentor.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Persuader</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Orator</td>
+								<td><input type="text" name="data.skills.orator.rating" value="{{data.skills.orator.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Manipulator</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Pathfinder</td>
+								<td><input type="text" name="data.skills.pathfinder.rating" value="{{data.skills.pathfinder.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Scout; Cartographer</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Peasant</td>
+								<td><input type="text" name="data.skills.peasant.rating" value="{{data.skills.peasant.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Laborer</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Persuader</td>
+								<td><input type="text" name="data.skills.persuader.rating" value="{{data.skills.persuader.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Manipulator</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Rider</td>
+								<td><input type="text" name="data.skills.rider.rating" value="{{data.skills.rider.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Peasant</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Ritualist</td>
+								<td><input type="text" name="data.skills.ritualist.rating" value="{{data.skills.ritualist.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Theologian</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Sailor</td>
+								<td><input type="text" name="data.skills.sailor.rating" value="{{data.skills.sailor.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Survivalist; Laborer</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Sapper</td>
+								<td><input type="text" name="data.skills.sapper.rating" value="{{data.skills.sapper.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Alchemist; Laborer</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Scavenger</td>
+								<td><input type="text" name="data.skills.scavenger.rating" value="{{data.skills.scavenger.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Scout</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Scholar</td>
+								<td><input type="text" name="data.skills.scholar.rating" value="{{data.skills.scholar.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Scholar</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Scout</td>
+								<td><input type="text" name="data.skills.scout.rating" value="{{data.skills.scout.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Pathfinder; Hunter</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Steward</td>
+								<td><input type="text" name="data.skills.steward.rating" value="{{data.skills.steward.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Scholar; Theologian</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Stonemason</td>
+								<td><input type="text" name="data.skills.stone_mason.rating" value="{{data.skills.stone_mason.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Laborer</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Survivalist</td>
+								<td><input type="text" name="data.skills.survivalist.rating" value="{{data.skills.survivalist.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Peasant</td>
+								<td>Health</td>
+							</tr>
+
+							<tr>
+								<td>Theologian</td>
+								<td><input type="text" name="data.skills.theologian.rating" value="{{data.skills.theologian.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Scholar; Ritualist</td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Weaver</td>
+								<td><input type="text" name="data.skills.weaver.rating" value="{{data.skills.weaver.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Laborer; Peasant</td>
+								<td>Will</td>
+							</tr>
+
+							<!--
+							<tr>
+								<td>Alchemist</td>
+								<td><input type="text" name="data.skills.alchemist.rating" value="{{data.skills.alchemist.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Alchemist</td>
+								<td><input type="text" name="data.skills.alchemist.rating" value="{{data.skills.alchemist.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Alchemist</td>
+								<td><input type="text" name="data.skills.alchemist.rating" value="{{data.skills.alchemist.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Will</td>
+							</tr>
+
+							<tr>
+								<td>Alchemist</td>
+								<td><input type="text" name="data.skills.alchemist.rating" value="{{data.skills.alchemist.rating}}" data-dtype="Number"/></td>
+								<td></td>
+								<td>Will</td>
+							</tr>
+							-->
+						</table>
+					</div>
+				</div>
+			</div>
+
+		<!--
+		<div class="abilities-skills">
+			<div class="abilities">
+				<h2>Abilities</h2>
+					
+				<div class="abilities-header">
+					<span>a</span>
+					<span name="data.abilities.header">Rating</span>
+					<span>b</span>
+					<span>c</span>
+					<span>d</span>
+				</div>
+
+				<div class="ability">
+					<label for="data.abilities.will.rating">Will</label>
+					<input type="text" name="data.abilities.will.rating" value="{{data.abilities.will.rating}}" data-dtype="Number" />
+					<i class="fas fa-dice-five"></i>
+				</div>
+
+				<div class="ability">
+					<label for="data.abilities.health.rating">Health</label>
+					<input type="text" name="data.abilities.health.rating" value="{{data.abilities.health.rating}}" data-dtype="Number" />
+					<i class="fas fa-dice-five"></i>
+				</div>
+
+				<div class="ability">
+					<label for="data.abilities.nature.rating">Nature</label>
+					<input type="text" name="data.abilities.nature.rating" value="{{data.abilities.nature.rating}}" data-dtype="Number" />
+					<i class="fas fa-dice-five"></i>
+				</div>
+
+				<div class="ability">
+					<label for="data.abilities.resources.rating">Resources</label>
+					<input type="text" name="data.abilities.resources.rating" value="{{data.abilities.resources.rating}}" data-dtype="Number" />
+					<i class="fas fa-dice-five"></i>
+				</div>
+
+				<div class="ability">
+					<label for="data.abilities.circles.rating">Circles</label>
+					<input type="text" name="data.abilities.circles.rating" value="{{data.abilities.circles.rating}}" data-dtype="Number" />
+					<i class="fas fa-dice-five"></i>
+				</div>
+
+				<div class="ability">
+					<label for="data.abilities.precedence.rating">Precedence</label>
+					<input type="text" name="data.abilities.precedence.rating" value="{{data.abilities.precedence.rating}}" data-dtype="Number" />
+					<i class="fas fa-dice-five"></i>
+				</div>
+
+				<div class="ability">
+					<label for="data.abilities.might.rating">Might</label>
+					<input type="text" name="data.abilities.might.rating" value="{{data.abilities.might.rating}}" data-dtype="Number" />
+					<i class="fas fa-dice-five"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="skills">
+			<h2>Skills</h2>
+
+			<div class="skills-header">
+			</div>
+
+			<div class="skill">
+				<label for="data.skills.alchemist.rating">Alchemist</label>
+				<input type="number" name="data.skills.alchemist.rating" value="{{data.skills.alchemist.rating}}" data-dtype="Number" />
+			</div>
+
+		</div>
+		-->
     </div>
 
     {{!-- Owned Items Tab --}}
@@ -106,4 +619,3 @@
 
   </section>
 </form>
-
