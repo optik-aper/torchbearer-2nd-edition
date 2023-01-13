@@ -14,3 +14,36 @@
 @mixin hide {
   display: none;
 }
+
+@mixin test-pips($size: 15px) {
+
+	> input:hover {
+		background-color: #1ad;
+	}
+	> input[type=checkbox] {
+		// visibility: hidden;
+		// display: none;
+
+		&:not(:checked) + label {
+			background-color: white;
+			&:hover {
+				background-color: $hover-color;
+			}
+		}
+
+		// &:checked + label {
+		// 	background-color: #1ba;
+		// }
+	}
+
+	> label {
+		display: block;
+		background-color: #ddd;
+		border: 1px solid black;
+		border-radius: calc(#{$size}/2);
+		width: $size;
+		height: $size;
+		margin-left: calc(#{$size}/5);
+		margin-top: 1px;
+	}
+}

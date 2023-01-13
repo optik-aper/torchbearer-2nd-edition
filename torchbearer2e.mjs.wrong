@@ -11,9 +11,9 @@ import { TORCHBEARER2E } from "./helpers/config.mjs";
 
 Hooks.once('init', function() {
 
-	game.boilerplate = {
-		BoilerplateActor,
-		BoilerplateItem
+	game.torchbearer2e = {
+		Torchbearer2eActor,
+		Torchbearer2eItem
 	};
 
 	CONFIG.TORCHBEARER2E = TORCHBEARER2E

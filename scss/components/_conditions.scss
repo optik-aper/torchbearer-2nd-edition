@@ -1,0 +1,12 @@
+.conditions {
+	display: flex;
+	flex-wrap: nowrap;
+	flex: 1 1 auto;
+	justify-content: space-between;
+
+	> div {
+		display: flex;
+		align-items: center;
+		align-content: center;
+	}
+}

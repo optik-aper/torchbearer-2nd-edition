@@ -1,0 +1,45 @@
+.abilities-skills {
+
+	align-items: center;
+
+	label {
+	  font-weight: bold;
+	}
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	> div {
+
+		display: inline;
+
+		> table {
+			> tbody {
+				> td {
+					margin: 10px 0px;
+				}
+			}
+		}
+	}
+
+	input[type=text] {
+	  
+	  width: 14px;
+	  margin-left: 10px;
+	  margin-right: 10px;
+   }
+}
+
+.test-tracker {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	@include test-pips;
+
+}

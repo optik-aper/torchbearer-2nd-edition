@@ -1,0 +1,51 @@
+.attributes {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	> div { 
+		display: flex;
+		flex: 1 1 0;
+		//flex-direction: row;
+		flex-wrap: wrap;
+		flex-grow: 1;
+		flex-shrink: 2;
+		gap: 10px;
+
+		> div {
+			display: flex;
+			//flex: 1 1 auto;
+			align-content: flex-start;
+			//justify-content: space-between;
+			flex-direction: row;
+			align-items: center;
+			flex-shrink: 1;
+			
+			input {
+				min-width: 100px;
+				max-width: 150px;
+				margin-left: 10px;
+				flex: 2 0 0;
+
+			}
+
+			#data-attributes-raiment {
+				min-width: 300px;
+			}
+
+			input[type=number] {
+				min-width: 40px;
+				max-width: 40px;
+			}
+		}
+	 }
+
+	label {
+		font-weight: bold;
+    }
+}
+
+.attribute-character-name {
+	grid-column: span 2;
+}

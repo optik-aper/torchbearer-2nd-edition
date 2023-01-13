@@ -1,380 +1,409 @@
 {
-  "Actor": {
-    "types": ["character", "npc", "monster"],
-    "templates": {
-	  "attributes": {
-          "name": "",
-	      "stock": "",
-	      "class": "",
-	      "age": "",
-	      "home": "",
-	      "raiment": "",
-	      "parents": "",
-	      "mentor": "",
-	      "friend": "",
-	      "enemy": "",
-		  "belief": "",
-		  "creed": "",
-		  "goal": "",
-		  "instinct": ""
+    "Actor": {
+        "types": [
+            "character",
+            "npc"
+        ],
+        "templates": null,
+        "character": {
+            "templates": null,
+            "attributes": {
+				"nick": null,
+                "name": null,
+                "stock": null,
+                "class": null,
+                "age": null,
+                "home": null,
+                "raiment": null,
+                "parents": null,
+                "mentor": null,
+                "friend": null,
+                "enemy": null,
+                "level": null,
+                "belief": null,
+                "creed": null,
+                "goal": null,
+                "instinct": null,
+                "precedence": 0,
+                "might": 3
+            },
+            "skills": {
+                "alchemist": {
+					"label": "alchemist",
+					"description": "Alchemist",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "arcanist": {
+					"label": "arcanist",
+					"description": "Arcanist",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "armorer": {
+					"label": "armorer",
+					"description": "Armorer",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "cartographer": {
+					"label": "cartographer",
+					"description": "Cartographer",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "commander": {
+					"label": "commander",
+					"description": "Commander",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "cook": {
+					"label": "cook",
+					"description": "Cook",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "criminal": {
+					"label": "criminal",
+					"description": "Criminal",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "dungeoneer": {
+					"label": "dungeoneer",
+					"description": "Dungeoneer",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "fighter": {
+					"label": "fighter",
+					"description": "Fighter",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "haggler": {
+					"label": "haggler",
+					"description": "Haggler",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "healer": {
+					"label": "healer",
+					"description": "Healer",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "hunter": {
+					"label": "hunter",
+					"description": "Hunter",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "lore_master": {
+					"label": "lore_master",
+					"description": "Lore Master",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "manipulator": {
+					"label": "manipulator",
+					"description": "Manipulator",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "orator": {
+					"label": "orator",
+					"description": "Orator",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "pathfinder": {
+					"label": "pathfinder",
+					"description": "Pathfinder",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "persuader": {
+					"label": "persuader",
+					"description": "Persuader",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "rider": {
+					"label": "rider",
+					"description": "Rider",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "ritualist": {
+					"label": "ritualist",
+					"description": "Ritualist",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "scavenger": {
+					"label": "scavenger",
+					"description": "Scavenger",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "scholar": {
+					"label": "scholar",
+					"description": "Scholar",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "scout": {
+					"label": "scout",
+					"description": "Scout",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "survivalist": {
+					"label": "survivalist",
+					"description": "Survivalist",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                },
+                "theologian": {
+					"label": "theologian",
+					"description": "Theologian",
+					"base_ability": null,
+					"help": [],
+                    "rating": 0,
+					"fail": 0,
+					"pass": 0
+                }
+            },
+            "artha": {
+                "fate": {
+                    "value": 0,
+                    "spent": 0
+                },
+                "persona": {
+                    "value": 0,
+                    "spent": 0
+                }
+            },
+            "traits": [
+                {
+                    "description": null,
+                    "level": 0,
+                    "beneficial": 0,
+                    "checks": 0,
+                    "advancement": {
+                        "pass": false,
+                        "fail": false,
+                        "fate": false,
+                        "persona": false
+                    }
+                },
+                {
+                    "description": null,
+                    "level": 0,
+                    "beneficial": 0,
+                    "checks": 0,
+                    "advancement": {
+                        "pass": false,
+                        "fail": false,
+                        "fate": false,
+                        "persona": false
+                    }
+                },
+                {
+                    "description": null,
+                    "level": 0,
+                    "beneficial": 0,
+                    "checks": 0,
+                    "advancement": {
+                        "pass": false,
+                        "fail": false,
+                        "fate": false,
+                        "persona": false
+                    }
+                },
+                {
+                    "description": null,
+                    "level": 0,
+                    "beneficial": 0,
+                    "checks": 0,
+                    "advancement": {
+                        "pass": false,
+                        "fail": false,
+                        "fate": false,
+                        "persona": false
+                    }
+                }
+            ],
+            "wises": [
+                {
+                    "description": null,
+                    "advancement": {
+                        "pass": false,
+                        "fail": false,
+                        "fate": false,
+                        "persona": false
+                    }
+                },
+                {
+                    "description": null,
+                    "advancement": {
+                        "pass": false,
+                        "fail": false,
+                        "fate": false,
+                        "persona": false
+                    }
+                },
+                {
+                    "description": null,
+                    "advancement": {
+                        "pass": false,
+                        "fail": false,
+                        "fate": false,
+                        "persona": false
+                    }
+                },
+                {
+                    "description": null,
+                    "advancement": {
+                        "pass": false,
+                        "fail": false,
+                        "fate": false,
+                        "persona": false
+                    }
+                }
+            ],
+            "conditions": {
+                "fresh": true,
+                "hungry_and_thirsty": false,
+                "angry": false,
+                "exhausted": false,
+                "injured": false,
+                "sick": false,
+                "dead": false
+            },
+            "abilities": {
+                "will": {
+					"label": "will",
+					"description": "Will",
+                    "rating": 0,
+                    "fail": 0,
+                    "pass": 0
+                },
+                "health": {
+					"label": "health",
+					"description": "Health",
+                    "rating": 0,
+                    "fail": 0,
+                    "pass": 0
+                },
+                "resources": {
+					"label": "resources",
+					"description": "Resources",
+                    "rating": 0,
+                    "fail": 0,
+                    "pass": 0
+                },
+                "circles": {
+					"label": "circles",
+					"description": "Circles",
+                    "rating": 0,
+                    "fail": 0,
+                    "pass": 0
+                },
+                "nature": {
+					"label": "nature",
+					"description": "Nature",
+                    "rating": 0,
+                    "descriptor": null
+                }
+            }
         },
-		"traits": [
-		  {
-		    "name": "",
-			"level": 0,
-			"beneficial": 0,
-			"checks": 0
-		  },
-		  {
-		    "name": "",
-			"level": 0,
-			"beneficial": 0,
-			"checks": 0
-		  },
-		  {
-		    "name": "",
-			"level": 0,
-			"beneficial": 0,
-			"checks": 0
-		  },
-		  {
-		    "name": "",
-			"level": 0,
-			"beneficial": 0,
-			"checks": 0
-		  },
-		},
-        "abilities": {
-	    	"will": {
-	      	"value": 0,
-	      	"fate": 0,
-	      	"persona": 0
-	      },
-	      "health": {
-	      	"value": 0,
-	      	"fate": 0,
-	      	"persona": 0
-	      },
-	      "resources": {
-	      	"value": 0,
-	      	"fate": 0,
-	      	"persona": 0
-	      },
-	      "circles": {
-	      	"value": 0,
-	      	"fate": 0,
-	      	"persona": 0
-	      },
-	      "precedence": {
-	      	"value": 0
-	      },
-		  "nature": {
-		  	"value": 0,
-			"descriptor": ""
-		  },
-	      "might": {
-	      	"value": 0
-	      }
-        },
-	    "artha": {
-	    	"fate": {
-	      	"value": 0,
-	      	"spent": 0
-	      },
-	      "persona": {
-	      	"value": 0,
-	      	"spent": 0
-	      }
-        },
-	    "conditions": {
-	    	"fresh": true,
-	      "hungry_and_thirsty": false,
-	      "angry": false,
-	      "exhausted": false,
-	      "injured": false,
-	      "sick": false,
-	      "dead": false
-	    },
-		"skills": {
-		  "alchemist": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "arcanist": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "armorer": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "cartographer": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "commander": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "cook": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "criminal": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "dungeoneer": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "fighter": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "haggler": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "healer": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "hunter": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "lore_master": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "manipulator": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "mentor": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "orator": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "pathfinder": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "persuader": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "rider": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "ritualist": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "scavenger": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "scholar": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "scout": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "survivalist": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "theologian": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  },
-		  "": {
-		    "rating": 0,
-			"advancement": {
-			  "fate": 0,
-			  "persona": 0
-			}
-		  }
-		},
-		"wises": [
-		  {
-		    "name": "",
-		    "advancement": {
-		      "pass": false,
-		      "fail": false,
-		      "fate": false,
-		      "persona": false
-		  },
-		  {
-		    "name": "",
-		    "advancement": {
-		      "pass": false,
-		      "fail": false,
-		      "fate": false,
-		      "persona": false
-		  },
-		  {
-		    "name": "",
-		    "advancement": {
-		      "pass": false,
-		      "fail": false,
-		      "fate": false,
-		      "persona": false
-		  },
-		  {
-		    "name": "",
-		    "advancement": {
-		      "pass": false,
-		      "fail": false,
-		      "fate": false,
-		      "persona": false
-		  }
-		]
-	  },
-	  "hitpoints": {
-	    "kill": 0,
-		"capture": 0,
-		"drive_off": 0,
-		"other": ""
-	  }
+        "npc": {
+            "templates": null
+        }
     },
-	"character": {
-	  "templates": ["attributes", "artha", "traits", "abilities", "skills", "wises", "conditions"]
-	},
-    "npc": {
-      "templates": ["attributes", "traits", "abilities", "skills"]
-    },
-	"monster": {
-	  "templates": ["attributes"]
-	  "rules": "",
-	  "type": ""
+	"Item": {
+        "types": [
+            "weapon",
+            "light_source",
+			"food",
+			"container",
+			"equipment",
+			"clothing"
+        ],
+		"templates": {
+
+		}
 	}
-  },
-  "Item": {
-    "types": ["weapon", "gear", "consumable", "loot", "item"],
-    "templates": {
-      "base": {
-        "description": "",
-		"inventory": "",
-		"value": ""
-      }
-    },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
-    "feature": {
-      "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
-    }
-  }
 }
