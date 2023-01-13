@@ -3,9 +3,14 @@
   "title": "Torchbearer 2nd Edition",
   "description": "A simple Torchbearer 2nd Edition system for FoundryVTT",
   "version": "v0.0.1-dev",
-  "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "9",
-  "author": "UxerUospr",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10",
+    "maximum": 10
+  },
+  "authors": [{
+    "name": "UxerUospr"
+  }],
   "esmodules": ["module/torchbearer2e.mjs"],
   "styles": ["css/torchbearer2e.css"],
   "scripts": [],
