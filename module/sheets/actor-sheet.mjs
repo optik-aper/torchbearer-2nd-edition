@@ -19,7 +19,7 @@ export class Torchbearer2EActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/torchbearer2e/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+    return `systems/torchbearer2e/templates/actor/actor-${this.actor.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
@@ -33,10 +33,10 @@ export class Torchbearer2EActorSheet extends ActorSheet {
     const context = super.getData();
 
     // Use a safe clone of the actor data for further operations.
-    const actorData = this.actor.data.toObject(false);
+    const actorData = this.actor.toObject(false);
 
     // Add the actor's data to context.data for easier access, as well as flags.
-    context.data = actorData.data;
+    context.system = actorData.system;
     context.flags = actorData.flags;
 
     // Prepare character data and items.
@@ -68,9 +68,9 @@ export class Torchbearer2EActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     // Handle ability scores.
-    for (let [k, v] of Object.entries(context.data.abilities)) {
-      v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
-    }
+    // for (let [k, v] of Object.entries(context.system.abilities)) {
+    //   v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
+    // }
   }
 
   /**
