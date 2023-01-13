@@ -4,7 +4,7 @@
             "character",
             "npc"
         ],
-        "templates": [
+        "templates": {
 			"common": {
 				"name": "",
 				"age": 0, 
@@ -45,7 +45,7 @@
                 "sick": false,
                 "dead": false
             }
-		],
+		},
         "character": {
             "templates": [
 				"common",
@@ -57,7 +57,7 @@
         "npc": {
             "templates": [
 				"common"
-			]
+			]	
         }
     },
 	"Item": {
@@ -72,7 +72,7 @@
 			"equipment",
 			"clothing"
         ],
-		"templates": [
+		"templates": {
 			"common": {
 				"name": "",
 				"description": ""
@@ -85,7 +85,7 @@
 				"persona": 0,
 				"fate": 0
 			}
-		],
+		},
 		"ability": {
 			"templates": [
 				"common",
