@@ -1,110 +1,110 @@
 {
-    "Actor": {
-        "types": [
-            "character",
-            "npc"
-        ],
-        "templates": {
-			"common": {
-				"name": "",
-				"age": 0, 
-				"stock": "",
-				"class": "",
-				"level": 0, 
-				"raiment": "",
-				"home": "",
-				"parents": "",
-				"friend": "",
-				"mentor": "",
-				"enemy": "",
-				"precedence": 0,
-				"might": 3
-			},
-			"artha": {
-				"fate": {
-					"current": 0,
-					"spent": 0
-				},
-				"persona": {
-					"current": 0,
-					"spent": 0
-				}
-			},
-			"fight_for": {
-				"belief": "",
-				"creed": "",
-				"goal": "",
-				"instinct": ""
-			},
-			"conditions": {
-                "fresh": true,
-                "hungry_and_thirsty": false,
-                "angry": false,
-                "exhausted": false,
-                "injured": false,
-                "sick": false,
-                "dead": false
-            }
-		},
-        "character": {
-            "templates": [
-				"common",
-				"artha",
-				"fight_for",
-				"conditions"
-			]
+  "Actor": {
+    "types": [
+      "character",
+      "npc"
+    ],
+    "templates": {
+      "common": {
+        "name": "",
+        "age": 0,
+        "stock": "",
+        "class": "",
+        "level": 0,
+        "raiment": "",
+        "home": "",
+        "parents": "",
+        "friend": "",
+        "mentor": "",
+        "enemy": "",
+        "precedence": 0,
+        "might": 3
+      },
+      "artha": {
+        "fate": {
+          "current": 0,
+          "spent": 0
         },
-        "npc": {
-            "templates": [
-				"common"
-			]	
+        "persona": {
+          "current": 0,
+          "spent": 0
         }
+      },
+      "fight_for": {
+        "belief": "",
+        "creed": "",
+        "goal": "",
+        "instinct": ""
+      },
+      "conditions": {
+        "fresh": true,
+        "hungry_and_thirsty": false,
+        "angry": false,
+        "exhausted": false,
+        "injured": false,
+        "sick": false,
+        "dead": false
+      }
     },
-	"Item": {
-        "types": [
-			"ability",
-			"skill",
-			"wise",
-            "weapon",
-            "light_source",
-			"food",
-			"container",
-			"equipment",
-			"clothing"
-        ],
-		"templates": {
-			"common": {
-				"name": "",
-				"description": ""
-			},
-			"advancement": {
-				"pass": 0,
-				"fail": 0
-			},
-			"artha_spent": {
-				"persona": 0,
-				"fate": 0
-			}
-		},
-		"ability": {
-			"templates": [
-				"common",
-				"advancement"
-			]
-		},
-		"skill": {
-			"templates": [
-				"common",
-				"advancement"
-			],
-			"base_ability": ""
-		},
-		"wise": {
-			"templates": [
-				"common",
-				"advancement",
-				"artha_spent"
-			]
-		}
-	}
+    "character": {
+      "templates": [
+        "common",
+        "artha",
+        "fight_for",
+        "conditions"
+      ]
+    },
+    "npc": {
+      "templates": [
+        "common"
+      ]
+    }
+  },
+  "Item": {
+    "types": [
+      "ability",
+      "skill",
+      "wise",
+      "weapon",
+      "light_source",
+      "food",
+      "container",
+      "equipment",
+      "clothing"
+    ],
+    "templates": {
+      "common": {
+        "name": "",
+        "description": ""
+      },
+      "advancement": {
+        "pass": 0,
+        "fail": 0
+      },
+      "artha_spent": {
+        "persona": 0,
+        "fate": 0
+      }
+    },
+    "ability": {
+      "templates": [
+        "common",
+        "advancement"
+      ]
+    },
+    "skill": {
+      "templates": [
+        "common",
+        "advancement"
+      ],
+      "base_ability": ""
+    },
+    "wise": {
+      "templates": [
+        "common",
+        "advancement",
+        "artha_spent"
+      ]
+    }
+  }
 }
