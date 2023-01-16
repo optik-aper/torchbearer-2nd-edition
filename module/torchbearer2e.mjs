@@ -22,18 +22,6 @@ Hooks.once('init', async function() {
     rollItemMacro
   };
 
-  // Add custom constants for configuration.
-  CONFIG.BOILERPLATE = BOILERPLATE;
-
-  /**
-   * Set an initiative formula for the system
-   * @type {String}
-   */
-  CONFIG.Combat.initiative = {
-    formula: "1d20 + @abilities.dex.mod",
-    decimals: 2
-  };
-
   // Define custom Document classes
   CONFIG.Actor.documentClass = Torchbearer2EActor;
   CONFIG.Item.documentClass = Torchbearer2EItem;
@@ -65,6 +53,10 @@ Handlebars.registerHelper('concat', function() {
 
 Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
+});
+
+Handlebars.registerHelper('capitalizeFirst', function(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 });
 
 /* -------------------------------------------- */

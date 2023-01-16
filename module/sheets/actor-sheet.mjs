@@ -35,7 +35,7 @@ export class Torchbearer2EActorSheet extends ActorSheet {
     // Use a safe clone of the actor data for further operations.
     const actorData = this.actor.toObject(false);
 
-    // Add the actor's data to context.data for easier access, as well as flags.
+    // Add the actor's data to context.system for easier access, as well as flags.
     context.system = actorData.system;
     context.flags = actorData.flags;
 
@@ -51,10 +51,12 @@ export class Torchbearer2EActorSheet extends ActorSheet {
     }
 
     // Add roll data for TinyMCE editors.
-    context.rollData = context.actor.getRollData();
+    // context.rollData = context.actor.getRollData();
 
     // Prepare active effects
-    context.effects = prepareActiveEffectCategories(this.actor.effects);
+    // context.effects = prepareActiveEffectCategories(this.actor.effects);
+
+    console.log(context);
 
     return context;
   }
@@ -67,10 +69,10 @@ export class Torchbearer2EActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    // Handle ability scores.
-    // for (let [k, v] of Object.entries(context.system.abilities)) {
+    // for (let [k, v] of Object.entries(context.system)) {
     //   v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
     // }
+    return context
   }
 
   /**
@@ -82,44 +84,25 @@ export class Torchbearer2EActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
-    const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: []
-    };
+    const items = [];
+    const skills = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
+      // Append to gear
       if (i.type === 'item') {
-        gear.push(i);
+        inventory.push(i);
       }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
-      }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.data.spellLevel != undefined) {
-          spells[i.data.spellLevel].push(i);
-        }
+      // Append to skills
+      else if (i.type === 'skill') {
+        skills.push(i);
       }
     }
 
     // Assign and return
-    context.gear = gear;
-    context.features = features;
-    context.spells = spells;
+    context.items = items;
+    context.skills = skills;
   }
 
   /* -------------------------------------------- */
@@ -131,7 +114,7 @@ export class Torchbearer2EActorSheet extends ActorSheet {
     // Render the item sheet for viewing/editing prior to the editable check.
     html.find('.item-edit').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
+      const item = this.actor.items.get(li("itemId"));
       item.sheet.render(true);
     });
 
@@ -145,7 +128,7 @@ export class Torchbearer2EActorSheet extends ActorSheet {
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
+      const item = this.actor.items.get(li("itemId"));
       item.delete();
       li.slideUp(200, () => this.render(false));
     });
@@ -188,7 +171,7 @@ export class Torchbearer2EActorSheet extends ActorSheet {
       data: data
     };
     // Remove the type from the dataset since it's in the itemData.type prop.
-    delete itemData.data["type"];
+    delete itemData["type"];
 
     // Finally, create the item!
     return await Item.create(itemData, {parent: this.actor});
@@ -200,30 +183,31 @@ export class Torchbearer2EActorSheet extends ActorSheet {
    * @private
    */
   _onRoll(event) {
-    event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
+    return;
+    // event.preventDefault();
+    // const element = event.currentTarget;
+    // const dataset = element.dataset;
 
-    // Handle item rolls.
-    if (dataset.rollType) {
-      if (dataset.rollType == 'item') {
-        const itemId = element.closest('.item').dataset.itemId;
-        const item = this.actor.items.get(itemId);
-        if (item) return item.roll();
-      }
-    }
+    // // Handle item rolls.
+    // if (dataset.rollType) {
+    //   if (dataset.rollType == 'item') {
+    //     const itemId = element.closest('.item').dataset.itemId;
+    //     const item = this.actor.items.get(itemId);
+    //     if (item) return item.roll();
+    //   }
+    // }
 
     // Handle rolls that supply the formula directly.
-    if (dataset.roll) {
-      let label = dataset.label ? `[ability] ${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
+    // if (dataset.roll) {
+    //   let label = dataset.label ? `[ability] ${dataset.label}` : '';
+    //   let roll = new Roll(dataset.roll, this.actor.getRollData());
+    //   roll.toMessage({
+    //     speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+    //     flavor: label,
+    //     rollMode: game.settings.get('core', 'rollMode'),
+    //   });
+    //   return roll;
+    // }
   }
 
 }

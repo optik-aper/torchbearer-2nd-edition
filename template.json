@@ -17,17 +17,50 @@
         "friend": "",
         "mentor": "",
         "enemy": "",
-        "precedence": 0,
-        "might": 3
+        "abilities": {
+          "will": {
+            "rating": 0,
+            "pass": 0,
+            "fail": 0
+          },
+          "health": {
+            "rating": 0,
+            "pass": 0,
+            "fail": 0
+          },
+          "nature": {
+            "rating": 0,
+            "pass": 0,
+            "fail": 0
+          },
+          "resources": {
+            "rating": 0,
+            "pass": 0,
+            "fail": 0
+          },
+          "circles": {
+            "rating": 0,
+            "pass": 0,
+            "fail": 0
+          },
+          "precedence": {
+            "rating": 0
+          },
+          "might": {
+            "rating": 3
+          }
+        }
       },
       "artha": {
-        "fate": {
-          "current": 0,
-          "spent": 0
-        },
-        "persona": {
-          "current": 0,
-          "spent": 0
+        "artha": {
+          "fate": {
+            "current": 0,
+            "spent": 0
+          },
+          "persona": {
+            "current": 0,
+            "spent": 0
+          }
         }
       },
       "fight_for": {
@@ -37,13 +70,15 @@
         "instinct": ""
       },
       "conditions": {
-        "fresh": true,
-        "hungry_and_thirsty": false,
-        "angry": false,
-        "exhausted": false,
-        "injured": false,
-        "sick": false,
-        "dead": false
+        "conditions": {
+          "fresh": true,
+          "hungry_and_thirsty": false,
+          "angry": false,
+          "exhausted": false,
+          "injured": false,
+          "sick": false,
+          "dead": false
+        }
       }
     },
     "character": {
@@ -62,20 +97,21 @@
   },
   "Item": {
     "types": [
-      "ability",
+      "item",
       "skill",
-      "wise",
-      "weapon",
-      "light_source",
-      "food",
-      "container",
-      "equipment",
-      "clothing"
+      "wise"
     ],
     "templates": {
       "common": {
         "name": "",
         "description": ""
+      },
+      "inventory": {
+        "carried": false,
+        "worn": false,
+        "size": 1,
+        "stowed": false,
+        "damaged": false
       },
       "advancement": {
         "pass": 0,
@@ -85,6 +121,12 @@
         "persona": 0,
         "fate": 0
       }
+    },
+    "item": {
+      "templates": [
+        "common",
+        "inventory"
+      ]
     },
     "ability": {
       "templates": [

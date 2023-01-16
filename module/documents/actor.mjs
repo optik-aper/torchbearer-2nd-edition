@@ -28,20 +28,16 @@ export class Torchbearer2EActor extends Actor {
    * available both inside and outside of character sheets (such as if an actor
    * is queried and has a roll executed directly from it).
    */
-  prepareDerivedData() {
-    const actorData = this.data;
-    const data = actorData.data;
-    const flags = actorData.flags.torchbearer2e || {};
+  // prepareDerivedData() {
+  //   const actorData = this;
+  //   const systemData = actorData.system;
+  //   const flags = actorData.flags.torchbearer2e || {};
 
-	console.log(this.data);
-
-	actorData.data.attributes.name = actorData.name;
-
-    // Make separate methods for each Actor type (character, npc, etc.) to keep
-    // things organized.
-    this._prepareCharacterData(actorData);
-    this._prepareNpcData(actorData);
-  }
+  //   // Make separate methods for each Actor type (character, npc, etc.) to keep
+  //   // things organized.
+  //   this._prepareCharacterData(actorData);
+  //   this._prepareNpcData(actorData);
+  // }
 
   /**
    * Prepare Character type specific data
@@ -50,9 +46,9 @@ export class Torchbearer2EActor extends Actor {
     if (actorData.type !== 'character') return;
 
     // Make modifications to data here. For example:
-    const data = actorData.data;
+    const data = actorData
 
-	console.log(actorData);
+	console.log(data);
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     // for (let [key, ability] of Object.entries(data.abilities)) {

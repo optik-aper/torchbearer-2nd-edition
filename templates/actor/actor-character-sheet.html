@@ -3,7 +3,7 @@
   {{!-- Sheet Header --}}
   <header class="character-header">
 
-	<img class="character-image" src="{{actor.img}}" data-edit="img" title="{{data.attributes.name}}" />
+	<img class="character-image" src="{{actor.img}}" data-edit="img" title="{{system.name}}" />
 		
 	<div class="attributes">
 
@@ -15,35 +15,35 @@
 
 		<div>
 			<div>
-			  <label for="data.attributes.stock">Stock</label>
-			  <input type="text" name="data.attributes.stock" value="{{data.attributes.stock}}" />
+			  <label for="system.stock">Stock</label>
+			  <input type="text" name="system.stock" value="{{system.stock}}" />
 			</div>
 
 			<div>
-			  <label for="data.attributes.class">Class</label>
-			  <input type="text" name="data.attributes.class" value="{{data.attributes.class}}" />
+			  <label for="system.class">Class</label>
+			  <input type="text" name="system.class" value="{{system.class}}" />
 			</div>
 
 			<div>
-			  <label for="data.attributes.age">Age</label>
-			  <input type="number" name="data.attributes.age" value="{{data.attributes.age}}" />
+			  <label for="system.age">Age</label>
+			  <input type="number" name="system.age" value="{{system.age}}" />
 			</div>
 
 			<div>
-			  <label for="data.attributes.level">Level</label>
-			  <input type="number" name="data.attributes.level" value="{{data.attributes.level}}" />
+			  <label for="system.level">Level</label>
+			  <input type="number" name="system.level" value="{{system.level}}" />
 			</div>
 		</div>
 
 		<div>
 			<div>
-			  <label for="data.attributes.home">Home</label>
-			  <input type="text" name="data.attributes.home" value="{{data.attributes.home}}" />
+			  <label for="system.home">Home</label>
+			  <input type="text" name="system.home" value="{{system.home}}" />
 			</div>
 
 			<div>
-			  <label for="data.attributes.raiment">Raiment</label>
-			  <input type="text" name="data.attributes.raiment" id="data-attributes-raiment" value="{{data.attributes.raiment}}" />
+			  <label for="system.raiment">Raiment</label>
+			  <input type="text" name="system.raiment" id="system-raiment" value="{{system.raiment}}" />
 			</div>
 		</div>
 	  </div>
@@ -51,38 +51,38 @@
 	
 		<div class="conditions">	
 			<div>
-			  <label for="data.conditions.fresh">Fresh</label>
-			  <input type="checkbox" name="data.conditions.fresh" value="{{data.conditions.fresh}}" data-dtype="Boolean" {{checked data.conditions.fresh}}/>
+			  <label for="system.conditions.fresh">Fresh</label>
+			  <input type="checkbox" name="system.conditions.fresh" value="{{system.conditions.fresh}}" data-dtype="Boolean" {{checked system.conditions.fresh}}/>
 			</div>
 
 			<div>
-			  <label for="data.conditions.hungry_and_thirsty">Hungry & Thirsty</label>
-			  <input type="checkbox" name="data.conditions.hungry_and_thirsty" value="{{data.conditions.hungry_and_thirsty}}" data-dtype="Boolean" {{checked data.conditions.hungry_and_thirsty}} />
+			  <label for="system.conditions.hungry_and_thirsty">Hungry & Thirsty</label>
+			  <input type="checkbox" name="system.conditions.hungry_and_thirsty" value="{{system.conditions.hungry_and_thirsty}}" data-dtype="Boolean" {{checked system.conditions.hungry_and_thirsty}} />
 			</div>
 
 			<div>
-			  <label for="data.conditions.angry">Angry</label>
-			  <input type="checkbox" name="data.conditions.angry" value="{{data.conditions.angry}}" data-dtype="Boolean" {{checked data.conditions.angry}} />
+			  <label for="system.conditions.angry">Angry</label>
+			  <input type="checkbox" name="system.conditions.angry" value="{{system.conditions.angry}}" data-dtype="Boolean" {{checked system.conditions.angry}} />
 			</div>
 
 			<div>
-			  <label for="data.conditions.exhausted">Exhausted</label>
-			  <input type="checkbox" name="data.conditions.exhausted" value="{{data.conditions.exhausted}}" data-dtype="Boolean" {{checked data.conditions.exhausted}} />
+			  <label for="system.conditions.exhausted">Exhausted</label>
+			  <input type="checkbox" name="system.conditions.exhausted" value="{{system.conditions.exhausted}}" data-dtype="Boolean" {{checked system.conditions.exhausted}} />
 			</div>
 
 			<div>
-			  <label for="data.conditions.sick">Sick</label>
-			  <input type="checkbox" name="data.conditions.sick" value="{{data.conditions.sick}}" data-dtype="Boolean" {{checked data.conditions.sick}} />
+			  <label for="system.conditions.sick">Sick</label>
+			  <input type="checkbox" name="system.conditions.sick" value="{{system.conditions.sick}}" data-dtype="Boolean" {{checked system.conditions.sick}} />
 			</div>
 
 			<div>
-			  <label for="data.conditions.injured">Injured</label>
-			  <input type="checkbox" name="data.conditions.injured" value="{{data.conditions.injured}}" data-dtype="Boolean" {{checked data.conditions.injured}} />
+			  <label for="system.conditions.injured">Injured</label>
+			  <input type="checkbox" name="system.conditions.injured" value="{{system.conditions.injured}}" data-dtype="Boolean" {{checked system.conditions.injured}} />
 			</div>
 
 			<div>
-			  <label for="data.conditions.dead">Dead</label>
-			  <input type="checkbox" name="data.conditions.dead" value="{{data.conditions.dead}}" data-dtype="Boolean" {{checked data.conditions.dead}} />
+			  <label for="system.conditions.dead">Dead</label>
+			  <input type="checkbox" name="system.conditions.dead" value="{{system.conditions.dead}}" data-dtype="Boolean" {{checked system.conditions.dead}} />
 			</div>
 		</div>
 	</header>
@@ -138,65 +138,61 @@
 		</div>
 		-->
 
-		<div class="abilities-skills">
-			<div>
+		<div>
+			<div class="sheet-abilities">
 				<h2>Abilities</h2>
 					
-				<table>
-					{{#each data.abilities as |ability key|}}
-						<tr>
-							<td>
-								<label for="data.abilities.{{key}}.rating">{{ability.description}}</label>
-							</td>
-							<td>
-								<input type="text" name="data.abilities.{{key}}.rating" value="{{ability.rating}}" data-dtype="Number" />
-							</td>
-							<td>
-								<i class="fas fa-dice-five fa-lg"></i>
-							</td>
-							<td>
-								<div class="test-tracker">
-									<span>P:</span>
-									<label for="ability.test.pass.{{key}}.1">&nbsp;</label>
-									<input type="checkbox" id="ability.test.pass.{{key}}.1" value="1">
-									<label for="ability.test.pass.{{key}}.2">&nbsp;</label>
-									<input type="checkbox" id="ability.test.pass.{{key}}.2" value="2">
-									<label for="ability.test.pass.{{key}}.3">&nbsp;</label>
-									<input type="checkbox" id="ability.test.pass.{{key}}.3" value="3">
-									<label for="ability.test.pass.{{key}}.4">&nbsp;</label>
-									<input type="checkbox" id="ability.test.pass.{{key}}.4" value="4">
-									<label for="ability.test.pass.{{key}}.5">&nbsp;</label>
-									<input type="checkbox" id="ability.test.pass.{{key}}.5" value="5">
-									<label for="ability.test.pass.{{key}}.6">&nbsp;</label>
-									<input type="checkbox" id="ability.test.pass.{{key}}.6" value="6">
-								</div>
-								<div class="test-tracker">
-									<span>F:</span>
-									<label for="ability.test.fail.{{key}}.1">&nbsp;</label>
-									<input type="checkbox" id="ability.test.fail.{{key}}.1" value="1">
-									<label for="ability.test.fail.{{key}}.2">&nbsp;</label>
-									<input type="checkbox" id="ability.test.fail.{{key}}.2" value="2">
-									<label for="ability.test.fail.{{key}}.3">&nbsp;</label>
-									<input type="checkbox" id="ability.test.fail.{{key}}.3" value="3">
-									<label for="ability.test.fail.{{key}}.4">&nbsp;</label>
-									<input type="checkbox" id="ability.test.fail.{{key}}.4" value="4">
-								</div>
-							</td>
-						</tr>
-					{{/each }}
-				</table>
+				{{#each system.abilities as |ability key|}}
+					<div>
+						<div>
+							<label for="system.abilities.{{key}}.rating">{{capitalizeFirst key}}</label>
+							<input type="text" name="system.abilities.{{key}}.rating" value="{{ability.rating}}" data-dtype="Number" />
+						</div>
+						<div>
+							<i class="fas fa-dice-five fa-lg"></i>
+						</div>
+						<div>
+							<div class="test-tracker">
+								<span>P:</span>
+								<label for="ability.test.pass.{{key}}.1">&nbsp;</label>
+								<input type="checkbox" id="ability.test.pass.{{key}}.1" value="1">
+								<label for="ability.test.pass.{{key}}.2">&nbsp;</label>
+								<input type="checkbox" id="ability.test.pass.{{key}}.2" value="2">
+								<label for="ability.test.pass.{{key}}.3">&nbsp;</label>
+								<input type="checkbox" id="ability.test.pass.{{key}}.3" value="3">
+								<label for="ability.test.pass.{{key}}.4">&nbsp;</label>
+								<input type="checkbox" id="ability.test.pass.{{key}}.4" value="4">
+								<label for="ability.test.pass.{{key}}.5">&nbsp;</label>
+								<input type="checkbox" id="ability.test.pass.{{key}}.5" value="5">
+								<label for="ability.test.pass.{{key}}.6">&nbsp;</label>
+								<input type="checkbox" id="ability.test.pass.{{key}}.6" value="6">
+							</div>
+							<div class="test-tracker">
+								<span>F:</span>
+								<label for="ability.test.fail.{{key}}.1">&nbsp;</label>
+								<input type="checkbox" id="ability.test.fail.{{key}}.1" value="1">
+								<label for="ability.test.fail.{{key}}.2">&nbsp;</label>
+								<input type="checkbox" id="ability.test.fail.{{key}}.2" value="2">
+								<label for="ability.test.fail.{{key}}.3">&nbsp;</label>
+								<input type="checkbox" id="ability.test.fail.{{key}}.3" value="3">
+								<label for="ability.test.fail.{{key}}.4">&nbsp;</label>
+								<input type="checkbox" id="ability.test.fail.{{key}}.4" value="4">
+							</div>
+						</div>
+					</div>
+				{{/each }}
 			</div>
 
 			<div>
 				<h2>Skills</h2>
 				<table>
-					{{#each data.skills as |skill key|}}
+					{{#each system.skills as |skill key|}}
 						<tr>
 							<td>
-								<label for="data.skills.{{key}}.rating">{{skill.description}}</label>
+								<label for="system.skills.{{key}}.rating">{{capitalizeFirst key}}</label>
 							</td>
 							<td>
-								<input type="number" name="data.skills.{{key}}.rating" value="{{skill.rating}}" data-dtype="Number" />
+								<input type="number" name="system.skills.{{key}}.rating" value="{{skill.rating}}" data-dtype="Number" />
 							</td>
 							<td>
 								<i class="fas fa-dice-five fa-lg"></i>
@@ -230,25 +226,30 @@
 								</div>
 						</tr>
 					{{/each}}
+
 				</table>
 			</div>
+			<div>
+				<label for="add-skill">Add new skill<label>
+				<button class="add-button" data-action="addSkill"><i class="fas fa-plus fa-lg"></i></button>
+			</div>
 		</div>
-    </div>
+	</div>
 
-    {{!-- Owned Items Tab --}}
-    <div class="tab items" data-group="primary" data-tab="items">
-       {{> "systems/torchbearer2e/templates/actor/parts/actor-items.html"}}
-    </div>
+	{{!-- Owned Items Tab --}}
+	<div class="tab items" data-group="primary" data-tab="items">
+		{{> "systems/torchbearer2e/templates/actor/parts/actor-items.html"}}
+	</div>
 
-    {{!-- Owned Spells Tab --}}
-    <div class="tab spells" data-group="primary" data-tab="spells">
-      {{> "systems/torchbearer2e/templates/actor/parts/actor-spells.html"}}
-    </div>
+	{{!-- Owned Spells Tab --}}
+	<div class="tab spells" data-group="primary" data-tab="spells">
+		{{> "systems/torchbearer2e/templates/actor/parts/actor-spells.html"}}
+	</div>
 
-    {{!-- Active Effects Tab --}}
-    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-      {{> "systems/torchbearer2e/templates/actor/parts/actor-effects.html"}}
-    </div>
+	{{!-- Active Effects Tab --}}
+	<div class="tab effects flexcol" data-group="primary" data-tab="effects">
+		{{> "systems/torchbearer2e/templates/actor/parts/actor-effects.html"}}
+	</div>
 
   </section>
 </form>
